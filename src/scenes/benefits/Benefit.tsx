@@ -17,7 +17,7 @@ type Props = {
 function Benefit({icon, title, description, setSelectedPage}: Props) {
   return (
     <motion.div 
-        className="mt-5 rounded-md border-2 border-gray-100 px-5 py-16 text-center"
+        className="mt-5 rounded-md border-2 border-gray-100 px-5 py-16 text-center w-full flex flex-col justify-between h-[324px] "
         variants={childVariant}
     >
         <div className="mb-4 flex justify-center">

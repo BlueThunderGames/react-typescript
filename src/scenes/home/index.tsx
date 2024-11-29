@@ -18,17 +18,17 @@ const Home = ({setSelectedPage}: Props) => {
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
     return (
-    <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
+    <section id="home" className="flex flex-col min-h-screen gap-16 bg-gray-20 lg:min-h-full py-10 lg:pb-0">
         { /* Image and Main Header */}
         <motion.div 
-            className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6"
+            className="lg:flex mx-auto w-5/6 items-center justify-center "
             onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >
             {/* Main Header */}
-            <div className="z-10 mt-32 md:basis-3/5">
+            <div className="z-10 mt-32 lg:basis-3/5">
                 {/* Headings */}
                 <motion.div 
-                    className="md:-mt-20"
+                    className="lg:-mt-20"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once:true, amount: 0.5}}
@@ -36,11 +36,11 @@ const Home = ({setSelectedPage}: Props) => {
                     variants={{ hidden: { opacity: 0, x:-50 }, visible: { opacity: 1, x:0 } }}
                 >
                     <div className="relative">
-                        <div className="before:absolute before:-top-20 md:before:content-evolvetext before:-left-20 before:z-[-1]">
+                        <div className="before:absolute before:-top-20 lg:before:content-evolvetext before:-left-20 before:z-[-1]">
                             <img src={HomePageText} alt="home-page-text" />
                         </div>
                     </div>
-                    <p className="mt-8 text-sm md:text-start">
+                    <p className="mt-8 text-sm lg:text-start">
                         Unrivaled Gym. Unparalleled Training Fitnesses Classes. Studios to get the Body Shapes that you dream of... Get Your Dream Body Now.
                     </p>
                 </motion.div>
@@ -66,7 +66,7 @@ const Home = ({setSelectedPage}: Props) => {
             </div>
            
             {/* Image */}
-            <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 mt-16 md:justify-items-end">
+            <div className="flex basis-3/5 lg:z-10 lg:ml-40 mt-16 lg:justify-items-end">
                 <img src={HomePageGraphic} alt="home-page-graphic" />
             </div>
         </motion.div>
