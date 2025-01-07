@@ -4,7 +4,6 @@ import Logo from "@/assets/Logo.png";
 import Link from "@/scenes/navbar/link.tsx";
 import { SelectedPage } from "@/shared/types.ts";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import { button, div } from "framer-motion/client";
 import ActionButton from "@/shared/ActionButton.tsx";
 
 
