@@ -67,7 +67,7 @@ function ContactUs({setSelectedPage}: Props) {
                             placeholder="NAME"
                             {...register("name", { required: true, maxLength: 100 })}
                         />
-                        {errors.name && (<p className="mt-1 text-primary-500">
+                        {errors.name && (<p className="-mt-2 mb-2 text-primary-500">
                             {errors.name.type === "required" && "This field is required."}
                             {errors.name.type === "maxLength" && "This field cannot exceed 100 characters."}
                         </p>)}
@@ -77,7 +77,7 @@ function ContactUs({setSelectedPage}: Props) {
                             placeholder="EMAIL"
                             {...register("email", { required: true, maxLength: 100, pattern: /^\S+@\S+$/i })}
                         />
-                        {errors.email && (<p className="mt-1 text-primary-500">
+                        {errors.email && (<p className="-mt-2 mb-2 text-primary-500">
                             {errors.email.type === "required" && "This field is required."}
                             {errors.email.type === "maxLength" && "This field cannot exceed 100 characters."}
                             {errors.email.type === "pattern" && "Please enter a valid email address."}
@@ -89,7 +89,7 @@ function ContactUs({setSelectedPage}: Props) {
                             placeholder="MESSAGE"
                             {...register("message", { required: true, maxLength: 2000 })}
                         />
-                        {errors.message && (<p className="mt-1 text-primary-500">
+                        {errors.message && (<p className="-mt-2 mb-2 text-primary-500">
                             {errors.message.type === "required" && "This field is required."}
                             {errors.message.type === "maxLength" && "This field cannot exceed 2000 characters."}
                         </p>)}
