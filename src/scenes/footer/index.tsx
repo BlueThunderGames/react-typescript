@@ -3,11 +3,10 @@ import { SelectedPage } from "@/shared/types.ts";
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 type Props = {
-    selectedPage: SelectedPage;
     setSelectedPage: (value: SelectedPage) => void;
 }
 
-function Footer({selectedPage, setSelectedPage}: Props) {
+const Footer = ({setSelectedPage}: Props) => {
   return (
     <footer className="bg-primary-100 py-16">
         <div className="justify-content mx-auto w-5/6 gap-16 md:flex">
